@@ -1,0 +1,595 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "created": "2026-03-08T12:00:00.000Z",
+    "modified": "2026-03-08T12:00:00.000Z",
+    "name": "tritium-fuel-cycle"
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "c3000001-0001-4000-8000-000000000001",
+        "type": "Constant",
+        "name": "fueling",
+        "position": { "x": -300, "y": 300 },
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000001-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000001",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "value": "fueling_rate" },
+        "color": "#64B5F6"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000002",
+        "type": "Amplifier",
+        "name": "burn",
+        "position": { "x": -140, "y": 240 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000002-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000002",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000002-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000002",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "gain": "burn_fraction" },
+        "color": "#EF5350"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000003",
+        "type": "Amplifier",
+        "name": "exhaust",
+        "position": { "x": -140, "y": 360 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000003-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000003",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000003-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000003",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "gain": "1 - burn_fraction" },
+        "color": "#FFA726"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000004",
+        "type": "Amplifier",
+        "name": "breeding (TBR)",
+        "position": { "x": 20, "y": 240 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000004-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000004",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000004-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000004",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "gain": "TBR" },
+        "color": "#81C784"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000005",
+        "type": "Integrator",
+        "name": "blanket",
+        "position": { "x": 180, "y": 240 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000005-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000005",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000005-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000005",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "initial_value": "0" },
+        "color": "#81C784"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000006",
+        "type": "Amplifier",
+        "name": "blanket drain",
+        "position": { "x": 180, "y": 310 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000006-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000006",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000006-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000006",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "_rotation": 2, "gain": "1/tau_blanket" },
+        "color": "#81C784"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000007",
+        "type": "Adder",
+        "name": "blanket sum",
+        "position": { "x": 100, "y": 240 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000007-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000007",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          },
+          {
+            "id": "c3000001-0001-4000-8000-000000000007-input-1",
+            "nodeId": "c3000001-0001-4000-8000-000000000007",
+            "name": "in 1",
+            "direction": "input",
+            "index": 1,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000007-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000007",
+            "name": "out",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "operations": "\"+-\"" },
+        "color": "#81C784"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000008",
+        "type": "Integrator",
+        "name": "exhaust tank",
+        "position": { "x": 20, "y": 360 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000008-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000008",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000008-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000008",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "initial_value": "0" },
+        "color": "#FFA726"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000009",
+        "type": "Amplifier",
+        "name": "exhaust drain",
+        "position": { "x": 20, "y": 430 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000009-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000009",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000009-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000009",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "_rotation": 2, "gain": "1/tau_exhaust" },
+        "color": "#FFA726"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000010",
+        "type": "Adder",
+        "name": "exhaust sum",
+        "position": { "x": -60, "y": 360 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000010-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000010",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          },
+          {
+            "id": "c3000001-0001-4000-8000-000000000010-input-1",
+            "nodeId": "c3000001-0001-4000-8000-000000000010",
+            "name": "in 1",
+            "direction": "input",
+            "index": 1,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000010-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000010",
+            "name": "out",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "operations": "\"+-\"" },
+        "color": "#FFA726"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000011",
+        "type": "Amplifier",
+        "name": "recovery",
+        "position": { "x": 180, "y": 360 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000011-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000011",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000011-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000011",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "gain": "recovery_eff" },
+        "color": "#FFA726"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000012",
+        "type": "Adder",
+        "name": "to storage",
+        "position": { "x": 340, "y": 300 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000012-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000012",
+            "name": "bred",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          },
+          {
+            "id": "c3000001-0001-4000-8000-000000000012-input-1",
+            "nodeId": "c3000001-0001-4000-8000-000000000012",
+            "name": "recovered",
+            "direction": "input",
+            "index": 1,
+            "color": "#969696"
+          },
+          {
+            "id": "c3000001-0001-4000-8000-000000000012-input-2",
+            "nodeId": "c3000001-0001-4000-8000-000000000012",
+            "name": "consumed",
+            "direction": "input",
+            "index": 2,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000012-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000012",
+            "name": "out",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "operations": "\"++-\"" },
+        "color": "#7E57C2"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000013",
+        "type": "Integrator",
+        "name": "storage",
+        "position": { "x": 460, "y": 300 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000013-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000013",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000013-output-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000013",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "initial_value": "T0_storage" },
+        "color": "#7E57C2"
+      },
+      {
+        "id": "c3000001-0001-4000-8000-000000000014",
+        "type": "Scope",
+        "name": "results",
+        "position": { "x": 600, "y": 270 },
+        "inputs": [
+          {
+            "id": "c3000001-0001-4000-8000-000000000014-input-0",
+            "nodeId": "c3000001-0001-4000-8000-000000000014",
+            "name": "storage",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          },
+          {
+            "id": "c3000001-0001-4000-8000-000000000014-input-1",
+            "nodeId": "c3000001-0001-4000-8000-000000000014",
+            "name": "exhaust",
+            "direction": "input",
+            "index": 1,
+            "color": "#969696"
+          },
+          {
+            "id": "c3000001-0001-4000-8000-000000000014-input-2",
+            "nodeId": "c3000001-0001-4000-8000-000000000014",
+            "name": "blanket",
+            "direction": "input",
+            "index": 2,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [],
+        "params": { "labels": "[\"storage [g]\", \"exhaust [g]\", \"blanket [g]\"]" }
+      }
+    ],
+    "connections": [
+      {
+        "id": "e3000001-0001-4000-8000-000000000001",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000001",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000002",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000002",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000001",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000003",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000003",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000001",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000012",
+        "targetPortIndex": 2
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000004",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000002",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000004",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000005",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000004",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000007",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000006",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000007",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000005",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000007",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000005",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000006",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000008",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000006",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000007",
+        "targetPortIndex": 1
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000009",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000006",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000012",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000010",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000003",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000010",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000011",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000010",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000008",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000012",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000008",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000009",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000013",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000009",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000010",
+        "targetPortIndex": 1
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000014",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000009",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000011",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000015",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000011",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000012",
+        "targetPortIndex": 1
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000016",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000012",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000013",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000017",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000013",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000014",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000018",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000008",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000014",
+        "targetPortIndex": 1
+      },
+      {
+        "id": "e3000001-0001-4000-8000-000000000019",
+        "sourceNodeId": "c3000001-0001-4000-8000-000000000005",
+        "sourcePortIndex": 0,
+        "targetNodeId": "c3000001-0001-4000-8000-000000000014",
+        "targetPortIndex": 2
+      }
+    ],
+    "annotations": [
+      {
+        "id": "f3000001-0001-4000-8000-000000000001",
+        "position": { "x": -350, "y": 470 },
+        "content": "# Tritium Fuel Cycle\n\nSimplified mass balance model of tritium flow in a fusion reactor.\n\n**Green** = blanket breeding path, **Orange** = exhaust recovery path, **Purple** = storage.\n\nChange TBR, burn fraction, and residence times in the code editor (E).",
+        "width": 500,
+        "height": 80,
+        "fontSize": 11
+      }
+    ]
+  },
+  "events": [],
+  "codeContext": {
+    "code": "# fuel cycle parameters\nburn_fraction = 0.02      # 2% burn fraction\nTBR = 1.05                # tritium breeding ratio\nfueling_rate = 1.0        # g/s injection rate\nrecovery_eff = 0.99       # exhaust recovery efficiency\n\n# residence times [s]\ntau_exhaust = 3600        # 1 hour\ntau_blanket = 1800        # 30 min\n\n# initial tritium inventory\nT0_storage = 100          # grams"
+  },
+  "simulationSettings": {
+    "duration": "86400",
+    "dt": "100",
+    "solver": "RKCK54",
+    "adaptive": true,
+    "atol": "",
+    "rtol": "",
+    "ftol": "",
+    "dt_min": "",
+    "dt_max": "",
+    "ghostTraces": 0,
+    "plotResults": true
+  }
+}

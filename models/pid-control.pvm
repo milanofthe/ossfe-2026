@@ -1,0 +1,265 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "created": "2026-03-08T12:00:00.000Z",
+    "modified": "2026-03-08T12:00:00.000Z",
+    "name": "pid-control"
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "b2000001-0001-4000-8000-000000000001",
+        "type": "Source",
+        "name": "setpoint",
+        "position": { "x": -200, "y": 400 },
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000001-output-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000001",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "func": "setpoint" }
+      },
+      {
+        "id": "b2000001-0001-4000-8000-000000000002",
+        "type": "Adder",
+        "name": "error",
+        "position": { "x": -60, "y": 400 },
+        "inputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000002-input-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000002",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          },
+          {
+            "id": "b2000001-0001-4000-8000-000000000002-input-1",
+            "nodeId": "b2000001-0001-4000-8000-000000000002",
+            "name": "in 1",
+            "direction": "input",
+            "index": 1,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000002-output-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000002",
+            "name": "out",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "operations": "\"+-\"" }
+      },
+      {
+        "id": "b2000001-0001-4000-8000-000000000003",
+        "type": "PID",
+        "name": "PID",
+        "position": { "x": 80, "y": 400 },
+        "inputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000003-input-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000003",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000003-output-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000003",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "Kp": "Kp", "Ki": "Ki", "Kd": "Kd", "f_max": "10" }
+      },
+      {
+        "id": "b2000001-0001-4000-8000-000000000004",
+        "type": "Integrator",
+        "name": "plant",
+        "position": { "x": 220, "y": 400 },
+        "inputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000004-input-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000004",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000004-output-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000004",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "id": "b2000001-0001-4000-8000-000000000005",
+        "type": "Amplifier",
+        "name": "plant gain",
+        "position": { "x": 340, "y": 400 },
+        "inputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000005-input-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000005",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000005-output-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000005",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "gain": "K" }
+      },
+      {
+        "id": "b2000001-0001-4000-8000-000000000006",
+        "type": "Scope",
+        "name": "results",
+        "position": { "x": 490, "y": 380 },
+        "inputs": [
+          {
+            "id": "b2000001-0001-4000-8000-000000000006-input-0",
+            "nodeId": "b2000001-0001-4000-8000-000000000006",
+            "name": "setpoint",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          },
+          {
+            "id": "b2000001-0001-4000-8000-000000000006-input-1",
+            "nodeId": "b2000001-0001-4000-8000-000000000006",
+            "name": "output",
+            "direction": "input",
+            "index": 1,
+            "color": "#969696"
+          },
+          {
+            "id": "b2000001-0001-4000-8000-000000000006-input-2",
+            "nodeId": "b2000001-0001-4000-8000-000000000006",
+            "name": "error",
+            "direction": "input",
+            "index": 2,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [],
+        "params": { "labels": "[\"setpoint\", \"output\", \"error\"]" }
+      }
+    ],
+    "connections": [
+      {
+        "id": "c2000001-0001-4000-8000-000000000001",
+        "sourceNodeId": "b2000001-0001-4000-8000-000000000001",
+        "sourcePortIndex": 0,
+        "targetNodeId": "b2000001-0001-4000-8000-000000000002",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c2000001-0001-4000-8000-000000000002",
+        "sourceNodeId": "b2000001-0001-4000-8000-000000000001",
+        "sourcePortIndex": 0,
+        "targetNodeId": "b2000001-0001-4000-8000-000000000006",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c2000001-0001-4000-8000-000000000003",
+        "sourceNodeId": "b2000001-0001-4000-8000-000000000005",
+        "sourcePortIndex": 0,
+        "targetNodeId": "b2000001-0001-4000-8000-000000000002",
+        "targetPortIndex": 1
+      },
+      {
+        "id": "c2000001-0001-4000-8000-000000000004",
+        "sourceNodeId": "b2000001-0001-4000-8000-000000000005",
+        "sourcePortIndex": 0,
+        "targetNodeId": "b2000001-0001-4000-8000-000000000006",
+        "targetPortIndex": 1
+      },
+      {
+        "id": "c2000001-0001-4000-8000-000000000005",
+        "sourceNodeId": "b2000001-0001-4000-8000-000000000002",
+        "sourcePortIndex": 0,
+        "targetNodeId": "b2000001-0001-4000-8000-000000000003",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c2000001-0001-4000-8000-000000000006",
+        "sourceNodeId": "b2000001-0001-4000-8000-000000000002",
+        "sourcePortIndex": 0,
+        "targetNodeId": "b2000001-0001-4000-8000-000000000006",
+        "targetPortIndex": 2
+      },
+      {
+        "id": "c2000001-0001-4000-8000-000000000007",
+        "sourceNodeId": "b2000001-0001-4000-8000-000000000003",
+        "sourcePortIndex": 0,
+        "targetNodeId": "b2000001-0001-4000-8000-000000000004",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c2000001-0001-4000-8000-000000000008",
+        "sourceNodeId": "b2000001-0001-4000-8000-000000000004",
+        "sourcePortIndex": 0,
+        "targetNodeId": "b2000001-0001-4000-8000-000000000005",
+        "targetPortIndex": 0
+      }
+    ],
+    "annotations": [
+      {
+        "id": "d2000001-0001-4000-8000-000000000001",
+        "position": { "x": -250, "y": 480 },
+        "content": "# PID Controller\n\nClassic feedback control loop. The PID tracks a step setpoint through an integrating plant. Adjust $K_p$, $K_i$, $K_d$ in the code editor (E).",
+        "width": 450,
+        "height": 60,
+        "fontSize": 11
+      }
+    ]
+  },
+  "events": [],
+  "codeContext": {
+    "code": "# plant gain\nK = 0.4\n\n# PID parameters\nKp = 1.5\nKi = 0.5\nKd = 0.1\n\n# setpoint function\ndef setpoint(t):\n    if t > 60:\n        return 0.5\n    elif t > 20:\n        return 1.0\n    else:\n        return 0.0"
+  },
+  "simulationSettings": {
+    "duration": "100",
+    "dt": "1",
+    "solver": "RKCK54",
+    "adaptive": true,
+    "atol": "",
+    "rtol": "",
+    "ftol": "",
+    "dt_min": "",
+    "dt_max": "",
+    "ghostTraces": 0,
+    "plotResults": true
+  }
+}

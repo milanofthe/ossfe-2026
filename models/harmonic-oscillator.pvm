@@ -1,0 +1,300 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "created": "2026-03-08T12:00:00.000Z",
+    "modified": "2026-03-08T12:00:00.000Z",
+    "name": "harmonic-oscillator"
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "a1000001-0001-4000-8000-000000000001",
+        "type": "Integrator",
+        "name": "velocity",
+        "position": { "x": 100, "y": 400 },
+        "inputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000001-input-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000001",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000001-output-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000001",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "initial_value": "v0" }
+      },
+      {
+        "id": "a1000001-0001-4000-8000-000000000002",
+        "type": "Integrator",
+        "name": "position",
+        "position": { "x": 220, "y": 400 },
+        "inputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000002-input-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000002",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000002-output-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000002",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "initial_value": "x0" }
+      },
+      {
+        "id": "a1000001-0001-4000-8000-000000000003",
+        "type": "Amplifier",
+        "name": "1/m",
+        "position": { "x": -20, "y": 400 },
+        "inputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000003-input-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000003",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000003-output-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000003",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "gain": "-1/m" }
+      },
+      {
+        "id": "a1000001-0001-4000-8000-000000000004",
+        "type": "Amplifier",
+        "name": "damping",
+        "position": { "x": 100, "y": 470 },
+        "inputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000004-input-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000004",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000004-output-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000004",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "_rotation": 2, "gain": "d" }
+      },
+      {
+        "id": "a1000001-0001-4000-8000-000000000005",
+        "type": "Amplifier",
+        "name": "stiffness",
+        "position": { "x": 220, "y": 470 },
+        "inputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000005-input-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000005",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000005-output-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000005",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": { "_rotation": 2, "gain": "k" }
+      },
+      {
+        "id": "a1000001-0001-4000-8000-000000000006",
+        "type": "Adder",
+        "name": "forces",
+        "position": { "x": -140, "y": 400 },
+        "inputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000006-input-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000006",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          },
+          {
+            "id": "a1000001-0001-4000-8000-000000000006-input-1",
+            "nodeId": "a1000001-0001-4000-8000-000000000006",
+            "name": "in 1",
+            "direction": "input",
+            "index": 1,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000006-output-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000006",
+            "name": "out",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": {}
+      },
+      {
+        "id": "a1000001-0001-4000-8000-000000000007",
+        "type": "Scope",
+        "name": "results",
+        "position": { "x": 370, "y": 390 },
+        "inputs": [
+          {
+            "id": "a1000001-0001-4000-8000-000000000007-input-0",
+            "nodeId": "a1000001-0001-4000-8000-000000000007",
+            "name": "v(t)",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          },
+          {
+            "id": "a1000001-0001-4000-8000-000000000007-input-1",
+            "nodeId": "a1000001-0001-4000-8000-000000000007",
+            "name": "x(t)",
+            "direction": "input",
+            "index": 1,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [],
+        "params": { "labels": "[\"v(t)\", \"x(t)\"]" }
+      }
+    ],
+    "connections": [
+      {
+        "id": "c1000001-0001-4000-8000-000000000001",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000001",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000002",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c1000001-0001-4000-8000-000000000002",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000003",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000001",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c1000001-0001-4000-8000-000000000003",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000006",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000003",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c1000001-0001-4000-8000-000000000004",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000004",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000006",
+        "targetPortIndex": 1
+      },
+      {
+        "id": "c1000001-0001-4000-8000-000000000005",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000005",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000006",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c1000001-0001-4000-8000-000000000006",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000001",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000004",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c1000001-0001-4000-8000-000000000007",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000002",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000005",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c1000001-0001-4000-8000-000000000008",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000001",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000007",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c1000001-0001-4000-8000-000000000009",
+        "sourceNodeId": "a1000001-0001-4000-8000-000000000002",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a1000001-0001-4000-8000-000000000007",
+        "targetPortIndex": 1
+      }
+    ],
+    "annotations": [
+      {
+        "id": "d1000001-0001-4000-8000-000000000001",
+        "position": { "x": -200, "y": 510 },
+        "content": "# Harmonic Oscillator\n\nSpring-mass-damper system: $m\\ddot{x} + d\\dot{x} + kx = 0$\n\nChange parameters in the code editor (E).",
+        "width": 420,
+        "height": 60,
+        "fontSize": 11
+      }
+    ]
+  },
+  "events": [],
+  "codeContext": {
+    "code": "# initial conditions\nx0 = 2\nv0 = 5\n\n# system parameters\nm = 0.8   # mass [kg]\nk = 1.5   # spring constant [N/m]\nd = 0.2   # damping [Ns/m]"
+  },
+  "simulationSettings": {
+    "duration": "30",
+    "dt": "0.5",
+    "solver": "RKCK54",
+    "adaptive": true,
+    "atol": "",
+    "rtol": "",
+    "ftol": "",
+    "dt_min": "",
+    "dt_max": "",
+    "ghostTraces": 0,
+    "plotResults": true
+  }
+}
