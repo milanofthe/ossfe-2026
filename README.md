@@ -46,9 +46,6 @@ Sc.plot()
 | [`02_pid_control.py`](scripts/02_pid_control.py) | PID controller with setpoint tracking |
 | [`03_tritium_fuel_cycle.py`](scripts/03_tritium_fuel_cycle.py) | Simplified fusion tritium fuel cycle |
 | [`04_plasma_position_control.py`](scripts/04_plasma_position_control.py) | Plasma vertical position PID control |
-| [`05_point_kinetics.py`](scripts/05_point_kinetics.py) | Reactor point kinetics (delayed vs prompt) |
-| [`06_plasma_power_balance.py`](scripts/06_plasma_power_balance.py) | 0D plasma energy balance |
-| [`07_coolant_loop.py`](scripts/07_coolant_loop.py) | Blanket coolant loop with heat exchanger |
 
 ## PathView Models
 
