@@ -1,0 +1,323 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "created": "2026-03-10T12:00:00.000Z",
+    "modified": "2026-03-10T12:00:00.000Z",
+    "name": "divertor-thermal-response"
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "259248d4-0f44-461d-9fde-e5a266d8ebc2",
+        "type": "Source",
+        "name": "q_surface(t)",
+        "position": {
+          "x": -240,
+          "y": 350
+        },
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "259248d4-0f44-461d-9fde-e5a266d8ebc2-output-0",
+            "nodeId": "259248d4-0f44-461d-9fde-e5a266d8ebc2",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": {
+          "func": "surface_heat_flux"
+        },
+        "color": "#EF5350"
+      },
+      {
+        "id": "30bc4b75-309d-41c4-a063-c72587fd585e",
+        "type": "ODE",
+        "name": "W + Cu layers",
+        "position": {
+          "x": -20,
+          "y": 350
+        },
+        "inputs": [
+          {
+            "id": "30bc4b75-309d-41c4-a063-c72587fd585e-input-0",
+            "nodeId": "30bc4b75-309d-41c4-a063-c72587fd585e",
+            "name": "q_surf",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "30bc4b75-309d-41c4-a063-c72587fd585e-output-0",
+            "nodeId": "30bc4b75-309d-41c4-a063-c72587fd585e",
+            "name": "[T_W, T_Cu]",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": {
+          "func": "thermal_ode",
+          "initial_value": "[T_W0, T_Cu0]"
+        },
+        "color": "#FF7043"
+      },
+      {
+        "id": "dbfe41c8-f8a5-4a09-92b0-782369b12240",
+        "type": "Function",
+        "name": "T_W(t)",
+        "position": {
+          "x": 180,
+          "y": 300
+        },
+        "inputs": [
+          {
+            "id": "dbfe41c8-f8a5-4a09-92b0-782369b12240-input-0",
+            "nodeId": "dbfe41c8-f8a5-4a09-92b0-782369b12240",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "dbfe41c8-f8a5-4a09-92b0-782369b12240-output-0",
+            "nodeId": "dbfe41c8-f8a5-4a09-92b0-782369b12240",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": {
+          "func": "get_T_W"
+        },
+        "color": "#FFA726"
+      },
+      {
+        "id": "57f517b5-1a42-4c6f-83da-732f3d41bb2f",
+        "type": "Function",
+        "name": "T_Cu(t)",
+        "position": {
+          "x": 180,
+          "y": 400
+        },
+        "inputs": [
+          {
+            "id": "57f517b5-1a42-4c6f-83da-732f3d41bb2f-input-0",
+            "nodeId": "57f517b5-1a42-4c6f-83da-732f3d41bb2f",
+            "name": "in 0",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "57f517b5-1a42-4c6f-83da-732f3d41bb2f-output-0",
+            "nodeId": "57f517b5-1a42-4c6f-83da-732f3d41bb2f",
+            "name": "out 0",
+            "direction": "output",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "params": {
+          "func": "get_T_Cu"
+        },
+        "color": "#FFA726"
+      },
+      {
+        "id": "d2bde068-de44-442b-a41e-8d9a17b902f5",
+        "type": "Scope",
+        "name": "W surface",
+        "position": {
+          "x": 360,
+          "y": 300
+        },
+        "inputs": [
+          {
+            "id": "d2bde068-de44-442b-a41e-8d9a17b902f5-input-0",
+            "nodeId": "d2bde068-de44-442b-a41e-8d9a17b902f5",
+            "name": "T_W [C]",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [],
+        "params": {
+          "labels": "[\"T_W [C]\"]"
+        }
+      },
+      {
+        "id": "a111a0f5-137f-45ea-8f41-b460bf3a3647",
+        "type": "Scope",
+        "name": "Cu interlayer",
+        "position": {
+          "x": 360,
+          "y": 400
+        },
+        "inputs": [
+          {
+            "id": "a111a0f5-137f-45ea-8f41-b460bf3a3647-input-0",
+            "nodeId": "a111a0f5-137f-45ea-8f41-b460bf3a3647",
+            "name": "T_Cu [C]",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [],
+        "params": {
+          "labels": "[\"T_Cu [C]\"]"
+        }
+      },
+      {
+        "id": "040648fa-902f-4b4f-a211-d72e23620f0e",
+        "type": "Scope",
+        "name": "heat flux",
+        "position": {
+          "x": -240,
+          "y": 240
+        },
+        "inputs": [
+          {
+            "id": "040648fa-902f-4b4f-a211-d72e23620f0e-input-0",
+            "nodeId": "040648fa-902f-4b4f-a211-d72e23620f0e",
+            "name": "q [MW/m2]",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [],
+        "params": {
+          "labels": "[\"q [MW/m2]\"]"
+        }
+      }
+    ],
+    "connections": [
+      {
+        "id": "11b8410a-3337-4733-9322-15100610d38d",
+        "sourceNodeId": "259248d4-0f44-461d-9fde-e5a266d8ebc2",
+        "sourcePortIndex": 0,
+        "targetNodeId": "30bc4b75-309d-41c4-a063-c72587fd585e",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "622d1811-95f5-4a50-a56e-dfc9eecdf89f",
+        "sourceNodeId": "30bc4b75-309d-41c4-a063-c72587fd585e",
+        "sourcePortIndex": 0,
+        "targetNodeId": "dbfe41c8-f8a5-4a09-92b0-782369b12240",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "d4e9b4a9-2f4e-499b-9f29-8333b0a27654",
+        "sourceNodeId": "30bc4b75-309d-41c4-a063-c72587fd585e",
+        "sourcePortIndex": 0,
+        "targetNodeId": "57f517b5-1a42-4c6f-83da-732f3d41bb2f",
+        "targetPortIndex": 0,
+        "waypoints": [
+          {
+            "id": "ea702220-a95f-4652-b827-bc7ff62b20da",
+            "position": {
+              "x": 140,
+              "y": 400
+            },
+            "isUserWaypoint": true
+          }
+        ]
+      },
+      {
+        "id": "7da32626-e047-4983-b300-e58d26840ca8",
+        "sourceNodeId": "dbfe41c8-f8a5-4a09-92b0-782369b12240",
+        "sourcePortIndex": 0,
+        "targetNodeId": "d2bde068-de44-442b-a41e-8d9a17b902f5",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "c32543ed-38bf-4fc9-970a-23e79bafafbc",
+        "sourceNodeId": "57f517b5-1a42-4c6f-83da-732f3d41bb2f",
+        "sourcePortIndex": 0,
+        "targetNodeId": "a111a0f5-137f-45ea-8f41-b460bf3a3647",
+        "targetPortIndex": 0
+      },
+      {
+        "id": "dc7e101b-6043-4e15-8330-78942ee9a794",
+        "sourceNodeId": "259248d4-0f44-461d-9fde-e5a266d8ebc2",
+        "sourcePortIndex": 0,
+        "targetNodeId": "040648fa-902f-4b4f-a211-d72e23620f0e",
+        "targetPortIndex": 0,
+        "waypoints": [
+          {
+            "id": "041b740c-2414-4df2-9be4-c81cfd896709",
+            "position": {
+              "x": -240,
+              "y": 240
+            },
+            "isUserWaypoint": true
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "id": "4b898427-e153-4cfb-8337-55f06bb59554",
+        "position": {
+          "x": -340,
+          "y": 120
+        },
+        "content": "# Divertor Thermal Response\n\nTwo-layer thermal network of a tungsten-armored divertor monoblock with CuCrZr interlayer.\n\n**2 coupled ODEs:**\n- $C_W \\cdot dT_W/dt = q_{surf} \\cdot A - k_{W{\\to}Cu} (T_W - T_{Cu})$\n- $C_{Cu} \\cdot dT_{Cu}/dt = k_{W{\\to}Cu} (T_W - T_{Cu}) - k_{Cu{\\to}C} (T_{Cu} - T_{cool})$\n\nHeat flux: 5 MW/m$^2$ steady + 10 MW/m$^2$ ELM pulses (1 ms, 5 Hz).",
+        "width": 380,
+        "height": 180,
+        "fontSize": 11
+      },
+      {
+        "id": "ac3029bf-d729-4715-bd8e-bf07500a2222",
+        "position": {
+          "x": -80,
+          "y": 310
+        },
+        "content": "2-layer thermal ODE",
+        "width": 150,
+        "height": 30,
+        "fontSize": 10,
+        "color": "#FF7043"
+      },
+      {
+        "id": "2e27dc59-41e4-4907-bda2-d27466e40863",
+        "position": {
+          "x": -300,
+          "y": 310
+        },
+        "content": "ELM + steady\nheat load",
+        "width": 120,
+        "height": 40,
+        "fontSize": 10,
+        "color": "#EF5350"
+      }
+    ]
+  },
+  "events": [],
+  "codeContext": {
+    "code": "import math\n\n# ── Divertor monoblock geometry ──\nA_surf  = 1e-4      # surface area [m^2]\nd_W     = 5e-3      # tungsten armor thickness [m]\nd_Cu    = 3e-3      # CuCrZr interlayer thickness [m]\n\n# ── Tungsten properties ──\nrho_W   = 19350     # density [kg/m^3]\ncp_W    = 130       # specific heat [J/(kg·K)]\nk_W     = 170       # thermal conductivity [W/(m·K)]\n\n# ── CuCrZr properties ──\nrho_Cu  = 8900      # density [kg/m^3]\ncp_Cu   = 385       # specific heat [J/(kg·K)]\nk_Cu    = 320       # thermal conductivity [W/(m·K)]\n\n# ── Thermal capacitances [J/K] ──\nC_W     = rho_W * cp_W * d_W * A_surf\nC_Cu    = rho_Cu * cp_Cu * d_Cu * A_surf\n\n# ── Thermal conductances [W/K] ──\n# W -> Cu: series resistance (half-W + contact + half-Cu)\nk_WCu   = A_surf / (d_W / (2 * k_W) + 1e-4 / 50 + d_Cu / (2 * k_Cu))\n# Cu -> coolant: convection + half-Cu conduction\nh_cool  = 50000     # HTC [W/(m^2·K)] (turbulent water)\nk_CuC   = A_surf / (d_Cu / (2 * k_Cu) + 1 / h_cool)\n\n# ── Boundary conditions ──\nT_cool  = 150       # coolant temperature [C]\nT_W0    = 200       # initial W temperature [C]\nT_Cu0   = 170       # initial Cu temperature [C]\n\n# ── Heat flux ──\nq_ss    = 5e6       # steady-state [W/m^2]\nq_elm   = 10e6      # ELM peak [W/m^2]\ndt_elm  = 1e-3      # ELM duration [s]\nf_elm   = 5.0       # ELM frequency [Hz]\n\ndef surface_heat_flux(t):\n    \"\"\"Surface heat flux [MW/m^2] with periodic ELM pulses\"\"\"\n    q = q_ss\n    phase = (t * f_elm) % 1.0\n    if phase < dt_elm * f_elm:\n        q += q_elm\n    return q * 1e-6  # display in MW/m^2\n\ndef thermal_ode(x, u, t):\n    \"\"\"\n    x = [T_W (C), T_Cu (C)]\n    u = [q_surf (MW/m^2)]\n    \"\"\"\n    T_W  = x[0]\n    T_Cu = x[1]\n    q = u[0] * 1e6  # MW/m^2 -> W/m^2\n\n    Q_in  = q * A_surf                 # surface input [W]\n    Q_WCu = k_WCu * (T_W - T_Cu)      # W -> Cu [W]\n    Q_CuC = k_CuC * (T_Cu - T_cool)   # Cu -> coolant [W]\n\n    dTW  = (Q_in - Q_WCu) / C_W\n    dTCu = (Q_WCu - Q_CuC) / C_Cu\n\n    return [dTW, dTCu]\n\ndef get_T_W(x):\n    return x[0] if isinstance(x, list) else x\n\ndef get_T_Cu(x):\n    return x[1] if isinstance(x, list) else x"
+  },
+  "simulationSettings": {
+    "duration": "2",
+    "dt": "0.001",
+    "solver": "RKBS32",
+    "adaptive": true,
+    "atol": null,
+    "rtol": null,
+    "ftol": null,
+    "dt_min": null,
+    "dt_max": "0.0005",
+    "ghostTraces": 0,
+    "plotResults": true
+  }
+}

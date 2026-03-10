@@ -43,6 +43,7 @@ Open these directly in [PathView](https://view.pathsim.org) — no installation 
 | Plasma Power Balance | [Open](https://view.pathsim.org/?model=https://raw.githubusercontent.com/milanofthe/ossfe-2026-tutorial/main/models/plasma-power-balance.pvm) |
 | Magnet Quench Protection | [Open](https://view.pathsim.org/?model=https://raw.githubusercontent.com/milanofthe/ossfe-2026-tutorial/main/models/magnet-quench-circuit.pvm) |
 | Plasma Current Ramp-Up | [Open](https://view.pathsim.org/?model=https://raw.githubusercontent.com/milanofthe/ossfe-2026-tutorial/main/models/plasma-current-rampup.pvm) |
+| Divertor Thermal Response | [Open](https://view.pathsim.org/?model=https://raw.githubusercontent.com/milanofthe/ossfe-2026-tutorial/main/models/divertor-thermal-response.pvm) |
 | Bateman Decay Chain | [Open](https://view.pathsim.org/?model=https://raw.githubusercontent.com/milanofthe/ossfe-2026-tutorial/main/models/bateman-decay-chain.pvm) |
 
 ### ARC Fusion Reactor Fuel Cycle

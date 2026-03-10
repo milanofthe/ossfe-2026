@@ -8,7 +8,7 @@
   "graph": {
     "nodes": [
       {
-        "id": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a",
+        "id": "1c96129d-607d-4289-842c-5192759257d0",
         "type": "Integrator",
         "name": "N_A",
         "position": {
@@ -17,8 +17,8 @@
         },
         "inputs": [
           {
-            "id": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a-input-0",
-            "nodeId": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a",
+            "id": "1c96129d-607d-4289-842c-5192759257d0-input-0",
+            "nodeId": "1c96129d-607d-4289-842c-5192759257d0",
             "name": "in 0",
             "direction": "input",
             "index": 0,
@@ -27,8 +27,8 @@
         ],
         "outputs": [
           {
-            "id": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a-output-0",
-            "nodeId": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a",
+            "id": "1c96129d-607d-4289-842c-5192759257d0-output-0",
+            "nodeId": "1c96129d-607d-4289-842c-5192759257d0",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -41,17 +41,17 @@
         "color": "#E57373"
       },
       {
-        "id": "76dc6263-adde-4ffb-b7da-cde61195229e",
+        "id": "20825ca7-d8a4-442c-8586-21d4a97c1cd4",
         "type": "Amplifier",
-        "name": "-λ_A",
+        "name": "-lambda_A",
         "position": {
           "x": 260,
           "y": 150
         },
         "inputs": [
           {
-            "id": "76dc6263-adde-4ffb-b7da-cde61195229e-input-0",
-            "nodeId": "76dc6263-adde-4ffb-b7da-cde61195229e",
+            "id": "20825ca7-d8a4-442c-8586-21d4a97c1cd4-input-0",
+            "nodeId": "20825ca7-d8a4-442c-8586-21d4a97c1cd4",
             "name": "in 0",
             "direction": "input",
             "index": 0,
@@ -60,8 +60,8 @@
         ],
         "outputs": [
           {
-            "id": "76dc6263-adde-4ffb-b7da-cde61195229e-output-0",
-            "nodeId": "76dc6263-adde-4ffb-b7da-cde61195229e",
+            "id": "20825ca7-d8a4-442c-8586-21d4a97c1cd4-output-0",
+            "nodeId": "20825ca7-d8a4-442c-8586-21d4a97c1cd4",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -74,7 +74,7 @@
         "color": "#E57373"
       },
       {
-        "id": "5f0fc32a-f095-4e81-acae-952869e14862",
+        "id": "353714e2-d681-4c25-a689-cca4455ed0dd",
         "type": "Scope",
         "name": "species A",
         "position": {
@@ -83,8 +83,8 @@
         },
         "inputs": [
           {
-            "id": "5f0fc32a-f095-4e81-acae-952869e14862-input-0",
-            "nodeId": "5f0fc32a-f095-4e81-acae-952869e14862",
+            "id": "353714e2-d681-4c25-a689-cca4455ed0dd-input-0",
+            "nodeId": "353714e2-d681-4c25-a689-cca4455ed0dd",
             "name": "N_A",
             "direction": "input",
             "index": 0,
@@ -97,17 +97,17 @@
         }
       },
       {
-        "id": "801407c8-8c6f-4a44-9543-39d305187c8b",
+        "id": "5719d145-b635-4d6a-99b0-433634f80b54",
         "type": "Amplifier",
-        "name": "λ_A",
+        "name": "lambda_A",
         "position": {
           "x": 100,
           "y": 320
         },
         "inputs": [
           {
-            "id": "801407c8-8c6f-4a44-9543-39d305187c8b-input-0",
-            "nodeId": "801407c8-8c6f-4a44-9543-39d305187c8b",
+            "id": "5719d145-b635-4d6a-99b0-433634f80b54-input-0",
+            "nodeId": "5719d145-b635-4d6a-99b0-433634f80b54",
             "name": "in 0",
             "direction": "input",
             "index": 0,
@@ -116,8 +116,8 @@
         ],
         "outputs": [
           {
-            "id": "801407c8-8c6f-4a44-9543-39d305187c8b-output-0",
-            "nodeId": "801407c8-8c6f-4a44-9543-39d305187c8b",
+            "id": "5719d145-b635-4d6a-99b0-433634f80b54-output-0",
+            "nodeId": "5719d145-b635-4d6a-99b0-433634f80b54",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -130,7 +130,7 @@
         "color": "#FFA726"
       },
       {
-        "id": "fdf55f10-2439-4b50-bebd-303340a019bc",
+        "id": "d0ee0677-12e5-4194-af19-4964bb6a6213",
         "type": "Adder",
         "name": "dN_B/dt",
         "position": {
@@ -139,16 +139,16 @@
         },
         "inputs": [
           {
-            "id": "fdf55f10-2439-4b50-bebd-303340a019bc-input-0",
-            "nodeId": "fdf55f10-2439-4b50-bebd-303340a019bc",
+            "id": "d0ee0677-12e5-4194-af19-4964bb6a6213-input-0",
+            "nodeId": "d0ee0677-12e5-4194-af19-4964bb6a6213",
             "name": "prod",
             "direction": "input",
             "index": 0,
             "color": "#969696"
           },
           {
-            "id": "fdf55f10-2439-4b50-bebd-303340a019bc-input-1",
-            "nodeId": "fdf55f10-2439-4b50-bebd-303340a019bc",
+            "id": "d0ee0677-12e5-4194-af19-4964bb6a6213-input-1",
+            "nodeId": "d0ee0677-12e5-4194-af19-4964bb6a6213",
             "name": "decay",
             "direction": "input",
             "index": 1,
@@ -157,8 +157,8 @@
         ],
         "outputs": [
           {
-            "id": "fdf55f10-2439-4b50-bebd-303340a019bc-output-0",
-            "nodeId": "fdf55f10-2439-4b50-bebd-303340a019bc",
+            "id": "d0ee0677-12e5-4194-af19-4964bb6a6213-output-0",
+            "nodeId": "d0ee0677-12e5-4194-af19-4964bb6a6213",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -171,7 +171,7 @@
         "color": "#FFA726"
       },
       {
-        "id": "978bb613-a24d-4b18-b275-fa8a9ec01234",
+        "id": "af0cb430-dfef-4681-aaf0-b0ba6bb02c1f",
         "type": "Integrator",
         "name": "N_B",
         "position": {
@@ -180,8 +180,8 @@
         },
         "inputs": [
           {
-            "id": "978bb613-a24d-4b18-b275-fa8a9ec01234-input-0",
-            "nodeId": "978bb613-a24d-4b18-b275-fa8a9ec01234",
+            "id": "af0cb430-dfef-4681-aaf0-b0ba6bb02c1f-input-0",
+            "nodeId": "af0cb430-dfef-4681-aaf0-b0ba6bb02c1f",
             "name": "in 0",
             "direction": "input",
             "index": 0,
@@ -190,8 +190,8 @@
         ],
         "outputs": [
           {
-            "id": "978bb613-a24d-4b18-b275-fa8a9ec01234-output-0",
-            "nodeId": "978bb613-a24d-4b18-b275-fa8a9ec01234",
+            "id": "af0cb430-dfef-4681-aaf0-b0ba6bb02c1f-output-0",
+            "nodeId": "af0cb430-dfef-4681-aaf0-b0ba6bb02c1f",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -204,17 +204,17 @@
         "color": "#FFA726"
       },
       {
-        "id": "8387f4f5-0e81-4595-8c30-3bf6f02c84ae",
+        "id": "4a767f52-65fe-4a75-979b-0989c3c4bd88",
         "type": "Amplifier",
-        "name": "λ_B",
+        "name": "lambda_B",
         "position": {
           "x": 560,
           "y": 370
         },
         "inputs": [
           {
-            "id": "8387f4f5-0e81-4595-8c30-3bf6f02c84ae-input-0",
-            "nodeId": "8387f4f5-0e81-4595-8c30-3bf6f02c84ae",
+            "id": "4a767f52-65fe-4a75-979b-0989c3c4bd88-input-0",
+            "nodeId": "4a767f52-65fe-4a75-979b-0989c3c4bd88",
             "name": "in 0",
             "direction": "input",
             "index": 0,
@@ -223,8 +223,8 @@
         ],
         "outputs": [
           {
-            "id": "8387f4f5-0e81-4595-8c30-3bf6f02c84ae-output-0",
-            "nodeId": "8387f4f5-0e81-4595-8c30-3bf6f02c84ae",
+            "id": "4a767f52-65fe-4a75-979b-0989c3c4bd88-output-0",
+            "nodeId": "4a767f52-65fe-4a75-979b-0989c3c4bd88",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -237,7 +237,7 @@
         "color": "#FFA726"
       },
       {
-        "id": "6eeed191-e4e2-4be2-8806-86ca2950843c",
+        "id": "20a882b1-a0fd-4c21-bdd7-79d50734fc04",
         "type": "Scope",
         "name": "species B",
         "position": {
@@ -246,8 +246,8 @@
         },
         "inputs": [
           {
-            "id": "6eeed191-e4e2-4be2-8806-86ca2950843c-input-0",
-            "nodeId": "6eeed191-e4e2-4be2-8806-86ca2950843c",
+            "id": "20a882b1-a0fd-4c21-bdd7-79d50734fc04-input-0",
+            "nodeId": "20a882b1-a0fd-4c21-bdd7-79d50734fc04",
             "name": "N_B",
             "direction": "input",
             "index": 0,
@@ -260,7 +260,7 @@
         }
       },
       {
-        "id": "c19f5ef2-c869-4e93-b455-319b9925876c",
+        "id": "a172ba52-964d-4023-8925-0722c29d8467",
         "type": "Integrator",
         "name": "N_C",
         "position": {
@@ -269,8 +269,8 @@
         },
         "inputs": [
           {
-            "id": "c19f5ef2-c869-4e93-b455-319b9925876c-input-0",
-            "nodeId": "c19f5ef2-c869-4e93-b455-319b9925876c",
+            "id": "a172ba52-964d-4023-8925-0722c29d8467-input-0",
+            "nodeId": "a172ba52-964d-4023-8925-0722c29d8467",
             "name": "in 0",
             "direction": "input",
             "index": 0,
@@ -279,8 +279,8 @@
         ],
         "outputs": [
           {
-            "id": "c19f5ef2-c869-4e93-b455-319b9925876c-output-0",
-            "nodeId": "c19f5ef2-c869-4e93-b455-319b9925876c",
+            "id": "a172ba52-964d-4023-8925-0722c29d8467-output-0",
+            "nodeId": "a172ba52-964d-4023-8925-0722c29d8467",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -293,7 +293,7 @@
         "color": "#81C784"
       },
       {
-        "id": "7a7f3c04-c325-4c89-9761-febe23defbbb",
+        "id": "e4faecb0-77a6-4ac6-9ec7-914d486b15ff",
         "type": "Scope",
         "name": "species C",
         "position": {
@@ -302,8 +302,8 @@
         },
         "inputs": [
           {
-            "id": "7a7f3c04-c325-4c89-9761-febe23defbbb-input-0",
-            "nodeId": "7a7f3c04-c325-4c89-9761-febe23defbbb",
+            "id": "e4faecb0-77a6-4ac6-9ec7-914d486b15ff-input-0",
+            "nodeId": "e4faecb0-77a6-4ac6-9ec7-914d486b15ff",
             "name": "N_C",
             "direction": "input",
             "index": 0,
@@ -318,21 +318,21 @@
     ],
     "connections": [
       {
-        "id": "1724939c-4dad-4df2-8c3b-bee7b78e6ae6",
-        "sourceNodeId": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a",
+        "id": "10e0f8e9-ff6c-48ed-b65b-a44e188fdfac",
+        "sourceNodeId": "1c96129d-607d-4289-842c-5192759257d0",
         "sourcePortIndex": 0,
-        "targetNodeId": "76dc6263-adde-4ffb-b7da-cde61195229e",
+        "targetNodeId": "20825ca7-d8a4-442c-8586-21d4a97c1cd4",
         "targetPortIndex": 0
       },
       {
-        "id": "b31196d1-29d2-48e3-bd55-d90925520733",
-        "sourceNodeId": "76dc6263-adde-4ffb-b7da-cde61195229e",
+        "id": "806197e5-a147-4e27-b397-e35e0a0e5879",
+        "sourceNodeId": "20825ca7-d8a4-442c-8586-21d4a97c1cd4",
         "sourcePortIndex": 0,
-        "targetNodeId": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a",
+        "targetNodeId": "1c96129d-607d-4289-842c-5192759257d0",
         "targetPortIndex": 0,
         "waypoints": [
           {
-            "id": "dec0b3af-efc7-4630-8b13-8aaabb3042f0",
+            "id": "6c0e30e5-17aa-4107-b5d4-7c50f58aad63",
             "position": {
               "x": 320,
               "y": 70
@@ -340,7 +340,7 @@
             "isUserWaypoint": true
           },
           {
-            "id": "43cea6ad-6b70-47b5-81a1-09ea2526bf87",
+            "id": "e74e2547-61c0-4068-82ca-62836eb19a5a",
             "position": {
               "x": 40,
               "y": 70
@@ -350,21 +350,21 @@
         ]
       },
       {
-        "id": "0af64bf3-6455-4236-8145-da59a59bf25a",
-        "sourceNodeId": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a",
+        "id": "79421303-7d6e-4c31-a1b2-2b8284ced861",
+        "sourceNodeId": "1c96129d-607d-4289-842c-5192759257d0",
         "sourcePortIndex": 0,
-        "targetNodeId": "5f0fc32a-f095-4e81-acae-952869e14862",
+        "targetNodeId": "353714e2-d681-4c25-a689-cca4455ed0dd",
         "targetPortIndex": 0
       },
       {
-        "id": "7441e033-145f-4a9e-b2dc-8f6be8af2be0",
-        "sourceNodeId": "fb89c2a0-3649-4e3d-bd3d-584098d1c44a",
+        "id": "9ed84269-d90e-444d-aa9b-6e9f03d290f8",
+        "sourceNodeId": "1c96129d-607d-4289-842c-5192759257d0",
         "sourcePortIndex": 0,
-        "targetNodeId": "801407c8-8c6f-4a44-9543-39d305187c8b",
+        "targetNodeId": "5719d145-b635-4d6a-99b0-433634f80b54",
         "targetPortIndex": 0,
         "waypoints": [
           {
-            "id": "af077e52-739e-4a9c-b168-7d56635b6daf",
+            "id": "b2aeadac-70c3-4c06-93d3-67b9455a9005",
             "position": {
               "x": 40,
               "y": 250
@@ -374,35 +374,35 @@
         ]
       },
       {
-        "id": "141b520e-9d32-45c9-8c77-f0ae079df824",
-        "sourceNodeId": "801407c8-8c6f-4a44-9543-39d305187c8b",
+        "id": "1980b5ab-1552-4cb7-a49f-f0b3cb66d0ea",
+        "sourceNodeId": "5719d145-b635-4d6a-99b0-433634f80b54",
         "sourcePortIndex": 0,
-        "targetNodeId": "fdf55f10-2439-4b50-bebd-303340a019bc",
+        "targetNodeId": "d0ee0677-12e5-4194-af19-4964bb6a6213",
         "targetPortIndex": 0
       },
       {
-        "id": "3f2e4307-190e-49d3-a050-33059c934678",
-        "sourceNodeId": "fdf55f10-2439-4b50-bebd-303340a019bc",
+        "id": "cd02be80-4b44-4bd4-9b50-0834f4a1c6d0",
+        "sourceNodeId": "d0ee0677-12e5-4194-af19-4964bb6a6213",
         "sourcePortIndex": 0,
-        "targetNodeId": "978bb613-a24d-4b18-b275-fa8a9ec01234",
+        "targetNodeId": "af0cb430-dfef-4681-aaf0-b0ba6bb02c1f",
         "targetPortIndex": 0
       },
       {
-        "id": "53414d42-2e98-42ad-9ddb-2bf73f72a142",
-        "sourceNodeId": "978bb613-a24d-4b18-b275-fa8a9ec01234",
+        "id": "0637c3fc-1945-4bdf-ac80-58b59297b3b0",
+        "sourceNodeId": "af0cb430-dfef-4681-aaf0-b0ba6bb02c1f",
         "sourcePortIndex": 0,
-        "targetNodeId": "8387f4f5-0e81-4595-8c30-3bf6f02c84ae",
+        "targetNodeId": "4a767f52-65fe-4a75-979b-0989c3c4bd88",
         "targetPortIndex": 0
       },
       {
-        "id": "825801e7-0a7b-4171-aca4-66890d254ee0",
-        "sourceNodeId": "8387f4f5-0e81-4595-8c30-3bf6f02c84ae",
+        "id": "90d32b32-62a6-4381-999a-1a6e41fd4be1",
+        "sourceNodeId": "4a767f52-65fe-4a75-979b-0989c3c4bd88",
         "sourcePortIndex": 0,
-        "targetNodeId": "fdf55f10-2439-4b50-bebd-303340a019bc",
+        "targetNodeId": "d0ee0677-12e5-4194-af19-4964bb6a6213",
         "targetPortIndex": 1,
         "waypoints": [
           {
-            "id": "a5c74319-2d29-4f70-93a8-fba14debd884",
+            "id": "48e1b143-3090-4c90-addc-df2768dc271a",
             "position": {
               "x": 620,
               "y": 440
@@ -410,7 +410,7 @@
             "isUserWaypoint": true
           },
           {
-            "id": "ec086cf5-1010-406d-851d-74237c8a7fc6",
+            "id": "03264007-346d-4b11-a6b2-616679065ec1",
             "position": {
               "x": 180,
               "y": 440
@@ -420,21 +420,21 @@
         ]
       },
       {
-        "id": "57904e07-c195-4b0f-8f58-7aacae485d64",
-        "sourceNodeId": "978bb613-a24d-4b18-b275-fa8a9ec01234",
+        "id": "79498f62-fed1-4e7b-9381-7068d0db09bd",
+        "sourceNodeId": "af0cb430-dfef-4681-aaf0-b0ba6bb02c1f",
         "sourcePortIndex": 0,
-        "targetNodeId": "6eeed191-e4e2-4be2-8806-86ca2950843c",
+        "targetNodeId": "20a882b1-a0fd-4c21-bdd7-79d50734fc04",
         "targetPortIndex": 0
       },
       {
-        "id": "170a2ce2-d906-4ffc-9da7-6fb398d68333",
-        "sourceNodeId": "8387f4f5-0e81-4595-8c30-3bf6f02c84ae",
+        "id": "4e699c6c-afec-44c6-944e-a8f6dc3f55ba",
+        "sourceNodeId": "4a767f52-65fe-4a75-979b-0989c3c4bd88",
         "sourcePortIndex": 0,
-        "targetNodeId": "c19f5ef2-c869-4e93-b455-319b9925876c",
+        "targetNodeId": "a172ba52-964d-4023-8925-0722c29d8467",
         "targetPortIndex": 0,
         "waypoints": [
           {
-            "id": "1a549c0d-85f5-403f-ac26-b152b39d57c7",
+            "id": "b7642b28-a2e0-433e-a37e-8da4e3cb5e5c",
             "position": {
               "x": 620,
               "y": 490
@@ -442,7 +442,7 @@
             "isUserWaypoint": true
           },
           {
-            "id": "ee94325a-c61a-4ee6-a178-836bc9e3f624",
+            "id": "b31a50c9-6954-4ff5-877d-363a3c0e49c6",
             "position": {
               "x": 340,
               "y": 490
@@ -452,27 +452,27 @@
         ]
       },
       {
-        "id": "8cf49190-8896-4ce0-bbdd-32bbca43fa39",
-        "sourceNodeId": "c19f5ef2-c869-4e93-b455-319b9925876c",
+        "id": "ff631c2c-e235-405a-a4cc-97d1cd72afe8",
+        "sourceNodeId": "a172ba52-964d-4023-8925-0722c29d8467",
         "sourcePortIndex": 0,
-        "targetNodeId": "7a7f3c04-c325-4c89-9761-febe23defbbb",
+        "targetNodeId": "e4faecb0-77a6-4ac6-9ec7-914d486b15ff",
         "targetPortIndex": 0
       }
     ],
     "annotations": [
       {
-        "id": "65179c74-2369-47c9-a278-023d159eeb26",
+        "id": "804581ee-b828-42a9-8726-5e7170756073",
         "position": {
           "x": 60,
           "y": 50
         },
-        "content": "# Bateman Equations\n\nSequential radioactive decay chain: **A → B → C**\nClassic nuclear engineering model for isotope transmutation and activation.",
+        "content": "# Bateman Equations\n\nSequential radioactive decay chain: **A -> B -> C**\nClassic nuclear engineering model for isotope transmutation and activation.",
         "width": 360,
         "height": 80,
         "fontSize": 11
       },
       {
-        "id": "faaf9d59-7539-406f-a606-10729861e629",
+        "id": "dc3b8c96-4ec7-48f0-ba11-4c627095511f",
         "position": {
           "x": 60,
           "y": 130
@@ -484,7 +484,7 @@
         "color": "#E57373"
       },
       {
-        "id": "428b6bca-b3dd-4b6f-ad70-199a63cb7c81",
+        "id": "35898e60-fa64-45bb-aed9-74b7dbb32117",
         "position": {
           "x": 200,
           "y": 330
@@ -496,7 +496,7 @@
         "color": "#FFA726"
       },
       {
-        "id": "1d2496a7-ae42-4b15-9bc7-f15fa6f40fb2",
+        "id": "fd7d0457-1ad9-4120-b8c3-88952326a323",
         "position": {
           "x": 360,
           "y": 510
@@ -511,7 +511,7 @@
   },
   "events": [],
   "codeContext": {
-    "code": "# Decay chain: A -> B -> C\n# Half-lives determine decay constants\nimport math\n\nt_half_A = 5.0     # half-life of A [s]\nt_half_B = 8.0     # half-life of B [s]\n\nlambda_A = math.log(2) / t_half_A   # decay constant A\nlambda_B = math.log(2) / t_half_B   # decay constant B\n\nN0 = 1000          # initial atoms of A"
+    "code": "import math\n\nt_half_A = 5.0     # half-life of A [s]\nt_half_B = 8.0     # half-life of B [s]\n\nlambda_A = math.log(2) / t_half_A\nlambda_B = math.log(2) / t_half_B\n\nN0 = 1000          # initial atoms of A"
   },
   "simulationSettings": {
     "duration": "40",

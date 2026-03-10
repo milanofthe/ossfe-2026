@@ -8,18 +8,18 @@
   "graph": {
     "nodes": [
       {
-        "id": "3c824c73-a88b-485d-a6d9-dbfcf01bc339",
+        "id": "72260ad0-dee9-4c2b-9840-8efa7d31879c",
         "type": "Source",
         "name": "V_loop(t)",
         "position": {
-          "x": -120,
-          "y": 300
+          "x": -240,
+          "y": 350
         },
         "inputs": [],
         "outputs": [
           {
-            "id": "3c824c73-a88b-485d-a6d9-dbfcf01bc339-output-0",
-            "nodeId": "3c824c73-a88b-485d-a6d9-dbfcf01bc339",
+            "id": "72260ad0-dee9-4c2b-9840-8efa7d31879c-output-0",
+            "nodeId": "72260ad0-dee9-4c2b-9840-8efa7d31879c",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -32,58 +32,51 @@
         "color": "#BA68C8"
       },
       {
-        "id": "3309d1a5-0b07-4718-af23-9a16a1665a66",
-        "type": "Adder",
-        "name": "sum",
+        "id": "1029f114-3fd3-4a28-9976-edf7d5a465f5",
+        "type": "ODE",
+        "name": "plasma dynamics",
         "position": {
-          "x": 40,
-          "y": 300
+          "x": -20,
+          "y": 350
         },
         "inputs": [
           {
-            "id": "3309d1a5-0b07-4718-af23-9a16a1665a66-input-0",
-            "nodeId": "3309d1a5-0b07-4718-af23-9a16a1665a66",
+            "id": "1029f114-3fd3-4a28-9976-edf7d5a465f5-input-0",
+            "nodeId": "1029f114-3fd3-4a28-9976-edf7d5a465f5",
             "name": "V_loop",
             "direction": "input",
             "index": 0,
-            "color": "#969696"
-          },
-          {
-            "id": "3309d1a5-0b07-4718-af23-9a16a1665a66-input-1",
-            "nodeId": "3309d1a5-0b07-4718-af23-9a16a1665a66",
-            "name": "R·I_p",
-            "direction": "input",
-            "index": 1,
             "color": "#969696"
           }
         ],
         "outputs": [
           {
-            "id": "3309d1a5-0b07-4718-af23-9a16a1665a66-output-0",
-            "nodeId": "3309d1a5-0b07-4718-af23-9a16a1665a66",
-            "name": "out 0",
+            "id": "1029f114-3fd3-4a28-9976-edf7d5a465f5-output-0",
+            "nodeId": "1029f114-3fd3-4a28-9976-edf7d5a465f5",
+            "name": "[I_p, T_e]",
             "direction": "output",
             "index": 0,
             "color": "#969696"
           }
         ],
         "params": {
-          "operations": "\"+-\""
+          "func": "plasma_ode",
+          "initial_value": "[Ip0, Te0]"
         },
         "color": "#81C784"
       },
       {
-        "id": "3819b06a-deaf-431f-8f56-8eea2bffd674",
-        "type": "Amplifier",
-        "name": "1/L_p",
+        "id": "20d63f8a-fc8c-4c0b-9903-8ddf8260851c",
+        "type": "Function",
+        "name": "I_p(t)",
         "position": {
           "x": 180,
           "y": 300
         },
         "inputs": [
           {
-            "id": "3819b06a-deaf-431f-8f56-8eea2bffd674-input-0",
-            "nodeId": "3819b06a-deaf-431f-8f56-8eea2bffd674",
+            "id": "20d63f8a-fc8c-4c0b-9903-8ddf8260851c-input-0",
+            "nodeId": "20d63f8a-fc8c-4c0b-9903-8ddf8260851c",
             "name": "in 0",
             "direction": "input",
             "index": 0,
@@ -92,8 +85,8 @@
         ],
         "outputs": [
           {
-            "id": "3819b06a-deaf-431f-8f56-8eea2bffd674-output-0",
-            "nodeId": "3819b06a-deaf-431f-8f56-8eea2bffd674",
+            "id": "20d63f8a-fc8c-4c0b-9903-8ddf8260851c-output-0",
+            "nodeId": "20d63f8a-fc8c-4c0b-9903-8ddf8260851c",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -101,22 +94,22 @@
           }
         ],
         "params": {
-          "gain": "1/L_p"
+          "func": "get_Ip"
         },
-        "color": "#81C784"
+        "color": "#FFA726"
       },
       {
-        "id": "221dca63-beb4-48d3-927c-2b09dfd9db6e",
-        "type": "Integrator",
-        "name": "I_p",
+        "id": "c2002958-8bc8-407f-bfe1-6b9700d9bb1c",
+        "type": "Function",
+        "name": "T_e(t)",
         "position": {
-          "x": 340,
-          "y": 300
+          "x": 180,
+          "y": 400
         },
         "inputs": [
           {
-            "id": "221dca63-beb4-48d3-927c-2b09dfd9db6e-input-0",
-            "nodeId": "221dca63-beb4-48d3-927c-2b09dfd9db6e",
+            "id": "c2002958-8bc8-407f-bfe1-6b9700d9bb1c-input-0",
+            "nodeId": "c2002958-8bc8-407f-bfe1-6b9700d9bb1c",
             "name": "in 0",
             "direction": "input",
             "index": 0,
@@ -125,8 +118,8 @@
         ],
         "outputs": [
           {
-            "id": "221dca63-beb4-48d3-927c-2b09dfd9db6e-output-0",
-            "nodeId": "221dca63-beb4-48d3-927c-2b09dfd9db6e",
+            "id": "c2002958-8bc8-407f-bfe1-6b9700d9bb1c-output-0",
+            "nodeId": "c2002958-8bc8-407f-bfe1-6b9700d9bb1c",
             "name": "out 0",
             "direction": "output",
             "index": 0,
@@ -134,56 +127,22 @@
           }
         ],
         "params": {
-          "initial_value": "0"
+          "func": "get_Te"
         },
-        "color": "#81C784"
+        "color": "#FFA726"
       },
       {
-        "id": "78176a79-d652-4fb7-8710-8956ea2ffdc0",
-        "type": "Amplifier",
-        "name": "R_p",
-        "position": {
-          "x": 340,
-          "y": 420
-        },
-        "inputs": [
-          {
-            "id": "78176a79-d652-4fb7-8710-8956ea2ffdc0-input-0",
-            "nodeId": "78176a79-d652-4fb7-8710-8956ea2ffdc0",
-            "name": "in 0",
-            "direction": "input",
-            "index": 0,
-            "color": "#969696"
-          }
-        ],
-        "outputs": [
-          {
-            "id": "78176a79-d652-4fb7-8710-8956ea2ffdc0-output-0",
-            "nodeId": "78176a79-d652-4fb7-8710-8956ea2ffdc0",
-            "name": "out 0",
-            "direction": "output",
-            "index": 0,
-            "color": "#969696"
-          }
-        ],
-        "params": {
-          "gain": "R_p",
-          "_rotation": 2
-        },
-        "color": "#E57373"
-      },
-      {
-        "id": "1b25ceb9-7b3c-4361-ba9e-a621c34c6af5",
+        "id": "2672c485-d6e9-4a12-8eea-38c6fff486f6",
         "type": "Scope",
-        "name": "plasma I",
+        "name": "plasma current",
         "position": {
-          "x": 500,
+          "x": 360,
           "y": 300
         },
         "inputs": [
           {
-            "id": "1b25ceb9-7b3c-4361-ba9e-a621c34c6af5-input-0",
-            "nodeId": "1b25ceb9-7b3c-4361-ba9e-a621c34c6af5",
+            "id": "2672c485-d6e9-4a12-8eea-38c6fff486f6-input-0",
+            "nodeId": "2672c485-d6e9-4a12-8eea-38c6fff486f6",
             "name": "I_p [MA]",
             "direction": "input",
             "index": 0,
@@ -196,17 +155,40 @@
         }
       },
       {
-        "id": "f85240bd-3eac-454d-82e0-7132cf3110c7",
+        "id": "6281fba5-fb8a-4c33-9ac3-79f1d741b18b",
         "type": "Scope",
-        "name": "loop V",
+        "name": "electron temp",
         "position": {
-          "x": -120,
-          "y": 200
+          "x": 360,
+          "y": 400
         },
         "inputs": [
           {
-            "id": "f85240bd-3eac-454d-82e0-7132cf3110c7-input-0",
-            "nodeId": "f85240bd-3eac-454d-82e0-7132cf3110c7",
+            "id": "6281fba5-fb8a-4c33-9ac3-79f1d741b18b-input-0",
+            "nodeId": "6281fba5-fb8a-4c33-9ac3-79f1d741b18b",
+            "name": "T_e [keV]",
+            "direction": "input",
+            "index": 0,
+            "color": "#969696"
+          }
+        ],
+        "outputs": [],
+        "params": {
+          "labels": "[\"T_e [keV]\"]"
+        }
+      },
+      {
+        "id": "e8f2cd1a-cd60-4806-9452-c6bd76e4713f",
+        "type": "Scope",
+        "name": "loop voltage",
+        "position": {
+          "x": -240,
+          "y": 240
+        },
+        "inputs": [
+          {
+            "id": "e8f2cd1a-cd60-4806-9452-c6bd76e4713f-input-0",
+            "nodeId": "e8f2cd1a-cd60-4806-9452-c6bd76e4713f",
             "name": "V_loop [V]",
             "direction": "input",
             "index": 0,
@@ -221,105 +203,120 @@
     ],
     "connections": [
       {
-        "id": "b1491c5e-de9f-45aa-968e-91db03dcbdb6",
-        "sourceNodeId": "3c824c73-a88b-485d-a6d9-dbfcf01bc339",
+        "id": "8db5ee45-2788-4437-9104-83100c066565",
+        "sourceNodeId": "72260ad0-dee9-4c2b-9840-8efa7d31879c",
         "sourcePortIndex": 0,
-        "targetNodeId": "3309d1a5-0b07-4718-af23-9a16a1665a66",
+        "targetNodeId": "1029f114-3fd3-4a28-9976-edf7d5a465f5",
         "targetPortIndex": 0
       },
       {
-        "id": "8d44e721-140d-446d-b2fb-7e13f196685d",
-        "sourceNodeId": "3309d1a5-0b07-4718-af23-9a16a1665a66",
+        "id": "a919fc6e-ac47-48b3-8d21-1084bf3136b0",
+        "sourceNodeId": "1029f114-3fd3-4a28-9976-edf7d5a465f5",
         "sourcePortIndex": 0,
-        "targetNodeId": "3819b06a-deaf-431f-8f56-8eea2bffd674",
+        "targetNodeId": "20d63f8a-fc8c-4c0b-9903-8ddf8260851c",
         "targetPortIndex": 0
       },
       {
-        "id": "db2b76c7-dad8-42f0-88e7-7283c57dac0d",
-        "sourceNodeId": "3819b06a-deaf-431f-8f56-8eea2bffd674",
+        "id": "dcb4060a-bc83-42e5-8d3b-5c7baf2fd62d",
+        "sourceNodeId": "1029f114-3fd3-4a28-9976-edf7d5a465f5",
         "sourcePortIndex": 0,
-        "targetNodeId": "221dca63-beb4-48d3-927c-2b09dfd9db6e",
-        "targetPortIndex": 0
-      },
-      {
-        "id": "1adb313e-46fe-4bd5-89ea-0688d68abcfc",
-        "sourceNodeId": "221dca63-beb4-48d3-927c-2b09dfd9db6e",
-        "sourcePortIndex": 0,
-        "targetNodeId": "78176a79-d652-4fb7-8710-8956ea2ffdc0",
-        "targetPortIndex": 0
-      },
-      {
-        "id": "47ae3f2e-2767-430a-a8ab-30a9af92e1e6",
-        "sourceNodeId": "78176a79-d652-4fb7-8710-8956ea2ffdc0",
-        "sourcePortIndex": 0,
-        "targetNodeId": "3309d1a5-0b07-4718-af23-9a16a1665a66",
-        "targetPortIndex": 1,
+        "targetNodeId": "c2002958-8bc8-407f-bfe1-6b9700d9bb1c",
+        "targetPortIndex": 0,
         "waypoints": [
           {
-            "id": "555a71b8-db10-488b-9e85-f8b715b93ee7",
+            "id": "0ecb836d-4820-4236-ad1f-a1b8eca1168b",
             "position": {
-              "x": 120,
-              "y": 420
+              "x": 140,
+              "y": 400
             },
             "isUserWaypoint": true
           }
         ]
       },
       {
-        "id": "807559c1-d8e1-4c56-8d9c-2e4858672b95",
-        "sourceNodeId": "221dca63-beb4-48d3-927c-2b09dfd9db6e",
+        "id": "fce5de37-56fa-4f38-829c-da364259d8fc",
+        "sourceNodeId": "20d63f8a-fc8c-4c0b-9903-8ddf8260851c",
         "sourcePortIndex": 0,
-        "targetNodeId": "1b25ceb9-7b3c-4361-ba9e-a621c34c6af5",
+        "targetNodeId": "2672c485-d6e9-4a12-8eea-38c6fff486f6",
         "targetPortIndex": 0
       },
       {
-        "id": "239a1f05-7531-4356-a12f-ddd467d5d778",
-        "sourceNodeId": "3c824c73-a88b-485d-a6d9-dbfcf01bc339",
+        "id": "51695762-bb41-4531-9d0d-fe43d5156768",
+        "sourceNodeId": "c2002958-8bc8-407f-bfe1-6b9700d9bb1c",
         "sourcePortIndex": 0,
-        "targetNodeId": "f85240bd-3eac-454d-82e0-7132cf3110c7",
+        "targetNodeId": "6281fba5-fb8a-4c33-9ac3-79f1d741b18b",
         "targetPortIndex": 0
+      },
+      {
+        "id": "79103bb2-bead-4b0a-8990-5cc289ac343c",
+        "sourceNodeId": "72260ad0-dee9-4c2b-9840-8efa7d31879c",
+        "sourcePortIndex": 0,
+        "targetNodeId": "e8f2cd1a-cd60-4806-9452-c6bd76e4713f",
+        "targetPortIndex": 0,
+        "waypoints": [
+          {
+            "id": "ca73e703-7b99-479a-8160-a71ee3d0e973",
+            "position": {
+              "x": -240,
+              "y": 240
+            },
+            "isUserWaypoint": true
+          }
+        ]
       }
     ],
     "annotations": [
       {
-        "id": "106175b8-8e96-4606-84e0-b2bda29e4343",
+        "id": "8f70393c-1e78-4b2f-b481-d29edee8c357",
         "position": {
-          "x": -160,
-          "y": 100
+          "x": -320,
+          "y": 120
         },
-        "content": "# Plasma Current Ramp-Up\n\nThe central solenoid (CS) acts as a transformer primary.\nRamping the CS current induces a loop voltage that drives plasma current.\n**L_p · dI_p/dt = V_loop - R_p · I_p**",
+        "content": "# Plasma Current Ramp-Up\n\nCoupled circuit-thermal model with Spitzer resistivity and bootstrap current.\n\n**2 coupled ODEs:**\n- $L_p \\cdot dI_p/dt = V_{loop} - R_p(T_e) \\cdot (I_p - I_{bs})$\n- $\\frac{3}{2} n_e V \\frac{dT_e}{dt} = P_{ohm} + P_{aux} - P_{loss}$\n\n**Spitzer:** $R_p \\propto T_e^{-3/2}$ — resistance drops as plasma heats\n\n**Bootstrap:** $I_{bs} = f_{bs} \\cdot I_p \\cdot \\sqrt{T_e / T_{ref}}$",
         "width": 380,
-        "height": 90,
+        "height": 180,
         "fontSize": 11
       },
       {
-        "id": "edd7b333-c444-4f50-b388-1eacfe61b3e4",
+        "id": "73b6b0fc-58d8-4826-a4d5-8ae0af077024",
         "position": {
-          "x": 300,
-          "y": 460
+          "x": -80,
+          "y": 310
         },
-        "content": "resistive decay",
-        "width": 120,
-        "height": 35,
+        "content": "coupled 2-state ODE",
+        "width": 160,
+        "height": 30,
         "fontSize": 10,
-        "color": "#E57373"
+        "color": "#81C784"
+      },
+      {
+        "id": "51f6f0c9-1b31-4e7c-8795-9ebbc4f28977",
+        "position": {
+          "x": -300,
+          "y": 310
+        },
+        "content": "CS transformer\nvoltage drive",
+        "width": 130,
+        "height": 40,
+        "fontSize": 10,
+        "color": "#BA68C8"
       }
     ]
   },
   "events": [],
   "codeContext": {
-    "code": "# Plasma circuit parameters (normalized)\nL_p = 1.0          # plasma self-inductance\nR_p = 0.05         # plasma resistance\nM = 0.8            # mutual inductance CS-plasma\nramp_rate = 1.0    # CS ramp rate\n\nV_max = M * ramp_rate  # induced loop voltage\nt_ramp = 15.0          # ramp duration [s]\n\ndef V_loop(t):\n    \"\"\"Loop voltage from CS ramp\"\"\"\n    if t < t_ramp:\n        return V_max      # CS ramping -> constant V_loop\n    return 0.0            # CS ramp stops -> I_p decays"
+    "code": "import math\n\n# ── Plasma parameters (ITER-like) ──\nR0     = 6.2        # major radius [m]\na      = 2.0        # minor radius [m]\nkappa  = 1.7        # elongation\nn_e    = 1e20       # electron density [m^-3]\nZ_eff  = 1.5        # effective charge\ne_keV  = 1.602e-16  # 1 keV in Joules\n\n# ── Derived geometry ──\nV_p    = 2 * math.pi**2 * R0 * a**2 * kappa   # plasma volume [m^3] ~830\nA_p    = math.pi * a**2 * kappa                # cross-section [m^2]  ~21\n\n# ── Circuit parameters ──\n# Plasma self-inductance: L_p ~ mu_0 * R0 * (ln(8R0/a) - 2 + li/2)\n# For ITER: L_p ~ 10 uH, but in MA units: L_eff = L_p [H] * 1e6 [A/MA] = V·s/MA\nmu_0   = 4e-7 * math.pi\nli     = 0.8        # internal inductance\nL_p    = mu_0 * R0 * (math.log(8 * R0 / a) - 2 + li / 2)  # ~10 uH\nL_eff  = L_p * 1e6  # effective inductance in [V·s/MA]\n\n# ── Spitzer resistivity ──\n# eta_Spitzer = 1.65e-9 * Z_eff * ln(Lambda) / T_e^(3/2)  [Ohm·m]\n# R_p = eta * 2*pi*R0 / A_p\nln_Lambda = 17.0\neta_coeff = 1.65e-9 * Z_eff * ln_Lambda  # [Ohm·m·keV^(3/2)]\n\n# ── Bootstrap current ──\nf_bs   = 0.3        # bootstrap fraction at reference\nT_ref  = 10.0       # reference temperature [keV]\n\n# ── Heating and confinement ──\nP_aux  = 33e6       # auxiliary heating [W] (NBI + ECRH)\ntau_E  = 3.0        # energy confinement time [s] (ITER H-mode)\n\n# ── Thermal energy coefficient ──\n# W_th = 3/2 * n_e * V_p [keV -> J] = 3/2 * n_e * V_p * e_keV\nW_coeff = 1.5 * n_e * V_p * e_keV  # [J/keV]\n\n# ── Initial conditions ──\nIp0    = 0.5        # seed plasma current [MA]\nTe0    = 0.5        # initial electron temperature [keV]\n\n# ── Loop voltage from CS ──\nt_ramp = 60.0       # CS ramp duration [s]\nV_max  = 1.0        # peak loop voltage [V]\n\ndef V_loop(t):\n    \"\"\"Induced loop voltage from CS current ramp\"\"\"\n    if t < 2:\n        return V_max * t / 2\n    elif t < t_ramp:\n        return V_max\n    elif t < t_ramp + 5:\n        return V_max * (1 - (t - t_ramp) / 5)\n    return 0.0\n\n# ── Coupled ODE ──\ndef plasma_ode(x, u, t):\n    \"\"\"\n    x = [I_p (MA), T_e (keV)]\n    u = [V_loop (V)]\n    \"\"\"\n    I_p = max(x[0], 0.01)  # plasma current [MA]\n    T_e = max(x[1], 0.05)  # electron temperature [keV]\n    V_l = u[0]              # loop voltage [V]\n\n    # Spitzer plasma resistance [Ohm]\n    eta = eta_coeff / T_e**1.5\n    R_p = eta * 2 * math.pi * R0 / A_p\n\n    # Bootstrap current [MA]\n    I_bs = f_bs * I_p * math.sqrt(T_e / T_ref)\n\n    # Ohmic current [MA]\n    I_ohm = I_p - I_bs\n\n    # Circuit equation: L_eff * dI_p/dt = V_loop - R_p * I_ohm * 1e6\n    # (I_ohm in MA, R_p in Ohm -> R_p * I_ohm * 1e6 gives Volts)\n    dIp = (V_l - R_p * I_ohm * 1e6) / L_eff\n\n    # Ohmic heating power [W]\n    P_ohm = R_p * (I_ohm * 1e6)**2\n\n    # Confinement losses [W]\n    P_loss = W_coeff * T_e / tau_E\n\n    # Bremsstrahlung [W]\n    # P_brem ~ 5.35e-37 * n_e^2 * V * Z_eff * sqrt(T_e[keV])\n    P_brem = 5.35e-37 * n_e**2 * V_p * Z_eff * math.sqrt(T_e)\n\n    # Energy equation\n    dTe = (P_ohm + P_aux - P_loss - P_brem) / W_coeff\n\n    return [dIp, dTe]\n\n# ── Extraction functions ──\ndef get_Ip(x):\n    return x[0]\n\ndef get_Te(x):\n    return x[1]"
   },
   "simulationSettings": {
-    "duration": "60",
-    "dt": "0.5",
-    "solver": "RKCK54",
+    "duration": "120",
+    "dt": "0.1",
+    "solver": "RKBS32",
     "adaptive": true,
     "atol": null,
     "rtol": null,
     "ftol": null,
     "dt_min": null,
-    "dt_max": null,
+    "dt_max": "0.05",
     "ghostTraces": 0,
     "plotResults": true
   }
