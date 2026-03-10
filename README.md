@@ -7,18 +7,33 @@ Tutorial materials for the [OSSFE 2026](https://ossfe.org/OSSFE_2026/) conferenc
 **Author:** Milan Rother
 
 
-## Tutorial Scripts
+## Interactive Examples (Documentation)
 
-| Script | Description |
-|--------|-------------|
-| [`01_harmonic_oscillator.py`](scripts/01_harmonic_oscillator.py) | Spring-mass-damper — the basics |
-| [`02_pid_control.py`](scripts/02_pid_control.py) | PID controller with setpoint tracking |
-| [`03_tritium_fuel_cycle.py`](scripts/03_tritium_fuel_cycle.py) | Simplified fusion tritium fuel cycle |
-| [`04_plasma_position_control.py`](scripts/04_plasma_position_control.py) | Plasma vertical position PID control |
+These examples run directly in the browser on the documentation site — no installation needed:
 
-## PathView Models
+### PathSim Basics
 
-Open these directly in the browser — no installation needed:
+| Example | Description |
+|---------|-------------|
+| [Linear Feedback](https://docs.pathsim.org/pathsim/v0.18.0/examples/linear-feedback) | First-order linear feedback — the simplest PathSim model |
+| [Harmonic Oscillator](https://docs.pathsim.org/pathsim/v0.18.0/examples/harmonic-oscillator) | Damped spring-mass-damper system |
+| [PID Controller](https://docs.pathsim.org/pathsim/v0.18.0/examples/pid-controller) | Classical PID feedback control |
+| [Chemical Reactor](https://docs.pathsim.org/pathsim/v0.18.0/examples/chemical-reactor) | Chemical reaction kinetics with nonlinear dynamics |
+
+### PathSim-Chem Toolbox
+
+| Example | Description |
+|---------|-------------|
+| [Point Kinetics](https://docs.pathsim.org/chem/v0.2.2/examples/point-kinetics) | Neutron point kinetics with delayed neutron groups |
+| [CSTR Reaction](https://docs.pathsim.org/chem/v0.2.2/examples/cstr-reaction) | Continuous stirred-tank reactor dynamics |
+| [Heat Exchanger](https://docs.pathsim.org/chem/v0.2.2/examples/heat-exchanger) | Counter-current heat exchanger |
+| [Process Flowsheet](https://docs.pathsim.org/chem/v0.2.2/examples/process-flowsheet) | Multi-unit process simulation |
+
+## Fusion Showcase — PathView Models
+
+Open these directly in [PathView](https://view.pathsim.org) — no installation needed:
+
+### Core Fusion Models
 
 | Model | Open in PathView |
 |-------|-----------------|
@@ -27,9 +42,9 @@ Open these directly in the browser — no installation needed:
 | Point Kinetics | [Open](https://view.pathsim.org/?model=https://raw.githubusercontent.com/milanofthe/ossfe-2026-tutorial/main/models/point-kinetics.pvm) |
 | Plasma Power Balance | [Open](https://view.pathsim.org/?model=https://raw.githubusercontent.com/milanofthe/ossfe-2026-tutorial/main/models/plasma-power-balance.pvm) |
 
-### ARC Fusion Reactor Fuel Cycle Models
+### ARC Fusion Reactor Fuel Cycle
 
-Tritium fuel cycle models of the ARC reactor (MIT PSFC), built with PathView:
+Tritium fuel cycle models of the ARC reactor (MIT PSFC):
 
 | Model | Open in PathView |
 |-------|-----------------|
@@ -40,7 +55,7 @@ Tritium fuel cycle models of the ARC reactor (MIT PSFC), built with PathView:
 
 - [PathSim GitHub](https://github.com/milanofthe/pathsim) — simulation framework
 - [PathView](https://view.pathsim.org) — browser-based graphical editor
-- [Documentation](https://pathsim.readthedocs.io)
+- [Documentation](https://docs.pathsim.org)
 - [JOSS Paper](https://doi.org/10.21105/joss.07484)
 
 ## License
